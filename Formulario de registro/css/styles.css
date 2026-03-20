@@ -1,0 +1,81 @@
+:root {
+    --color-principal: #6366f1;
+    --color-error: #ef4444;
+    --color-exitoso: #22c55e;
+    --color-fondo: #f8fafc;
+}
+
+body {
+    background: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.contenedor-principal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.datos-entrada {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.mensaje-error {
+    color: var(--color-error);
+    font-size: 12px;
+    display: none;
+}
+
+/* Muestra el error si el input es inválido y no está vacío */
+input:not(:placeholder-shown):invalid ~ .mensaje-error {
+    display: block;
+}
+
+.nivel-seguridad {
+    height: 5px;
+    width: 0%;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mensaje-confirmacion {
+    display: none;
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
